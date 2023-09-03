@@ -4,7 +4,10 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 public class Config {
     public static final ForgeConfigSpec config;
-    public static final ForgeConfigSpec.DoubleValue maxCriticalAttackChance, maxCriticalAttackDamageBonus, maxDamageReduction, initialCriticalAttackChance;
+    public static final ForgeConfigSpec.DoubleValue maxCriticalAttackChance;
+    public static final ForgeConfigSpec.DoubleValue maxCriticalAttackDamageBonus;
+    public static final ForgeConfigSpec.DoubleValue maxDamageReduction;
+    public static final ForgeConfigSpec.DoubleValue initialCriticalAttackChance;
     public static final ForgeConfigSpec.BooleanValue disableVanillaCriticalAttack;
 
     static {
