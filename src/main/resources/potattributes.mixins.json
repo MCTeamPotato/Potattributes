@@ -1,6 +1,7 @@
 {
   "required": true,
   "package": "com.teampotato.potattributes.mixin",
+  "plugin": "com.teampotato.potattributes.mixin.ConfigInitializer",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
   "injectors": {

@@ -1,6 +1,5 @@
 package com.teampotato.potattributes.mixin;
 
-import com.teampotato.potattributes.config.Config;
 import com.teampotato.potattributes.registry.ModAttributes;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
@@ -24,7 +23,7 @@ public abstract class MixinForgeHooks {
     @Overwrite
     @Nullable
     public static CriticalHitEvent getCriticalHit(Player player, Entity target, boolean vanillaCritical, float damageModifier) {
-        if (Config.disableVanillaCriticalAttack.get()) damageModifier = 1.0F;
+        if (ConfigInitializer.config.disableVanillaCriticalAttack) damageModifier = 1.0F;
         AttributeInstance criticalAttackChanceAttribute = player.getAttribute(ModAttributes.CRITICAL_ATTACK_CHANCE.get());
         if (criticalAttackChanceAttribute != null) {
             vanillaCritical = !(ThreadLocalRandom.current().nextDouble(0.00, 1.01) > criticalAttackChanceAttribute.getValue());
