@@ -15,7 +15,7 @@ public class Config {
         builder.push("Potattributes");
         initialCriticalAttackChance = builder.defineInRange("initialCriticalAttackChance", 0.25, 0.00, 1.00);
         maxCriticalAttackChance = builder.defineInRange("maxCriticalAttackChance", 0.60, 0.01, 1.00);
-        maxCriticalAttackDamageBonus = builder.defineInRange("maxCriticalAttackDamageBonus", 0.40, 0.01, 1.00);
+        maxCriticalAttackDamageBonus = builder.defineInRange("maxCriticalAttackDamageBonus", 0.40, 0.01, Double.MAX_VALUE);
         maxDamageReduction = builder.defineInRange("maxDamageReduction", 0.30, 0.01, 1.00);
         disableVanillaCriticalAttack = builder.define("disableVanillaCriticalAttack", true);
         builder.pop();
