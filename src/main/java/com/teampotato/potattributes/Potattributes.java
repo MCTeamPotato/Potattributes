@@ -19,11 +19,11 @@ public class Potattributes {
     public static final String MOD_ID = "potattributes";
 
     public Potattributes() {
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.config);
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         MinecraftForge.EVENT_BUS.register(AttributeEvents.class);
-        ModAttributes.ATTRIBUTES.register(bus);
         bus.addListener(this::registerAttributes);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.config);
+        ModAttributes.ATTRIBUTES.register(bus);
     }
 
     private void registerAttributes(EntityAttributeModificationEvent event) {
